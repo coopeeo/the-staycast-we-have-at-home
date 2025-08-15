@@ -1,4 +1,4 @@
-import { Client } from 'castv2-client';
+import { Client, Application } from 'castv2-client';
 import { StayCastApplication } from './application.js';
 import mDNS from 'multicast-dns';
 const mdns = mDNS();
@@ -50,8 +50,8 @@ function connectToChromecast(host) {
   client = new Client();
   client.connect(host, () => {
     log('Connected to Chromecast');
-
-    client.launch(StayCastApplication, (err, app) => {
+    
+    client.launch(StayCastApplication,/** @param {Application} app */ (err, app) => {
       if (err) {
         log(`Error launching app: ${err.message}`);
         reconnect();
@@ -110,8 +110,9 @@ function reconnect() {
 }
 
 // Handle exit
-process.on('SIGTERM', () => {
+process.on('SIGINT', () => {
   log('Shutting down script');
+  session.close()
   if (client) client.close();
   process.exit();
 });

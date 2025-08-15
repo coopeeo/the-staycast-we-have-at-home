@@ -4,30 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
-    <!--script src="//www.gstatic.com/cast/sdk/libs/devtools/debug_layer/caf_receiver_logger.js"></script-->
-    <title>Document</title>
+    <script src="//www.gstatic.com/cast/sdk/libs/devtools/debug_layer/caf_receiver_logger.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
+    <title>the staycast we have at home :3</title>
+    <style>
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
     body {
       background-color: #1a1a1a;
       color: white;
-      font-family: Arial, sans-serif;
+      font-family: Roboto, sans-serif;
       text-align: center;
-      margin: 0;
-      padding: 20px;
     }
-    #logo {
-      max-width: 200px;
-      margin-bottom: 20px;
+    .container {
+      display: grid;
+      grid-template-columns: 3fr 4fr;
+      grid-template-rows: 1fr;
+      height: 100vh;
+      width: 100vw;
+      gap: 0;
     }
-    #message {
+    .hello {
+        background-color: #333333;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+    .steps {
+        height: 100%;
+        width: 100%;
+    }
+    .hello > .big-boi {
       font-size: 28px;
-      margin-top: 20px;
+      margin-top: 40%;
+      text-align: left;
+      margin-left: 15%;
+      font-family: 'Google Sans', sans-serif;
     }
+    .hello > .big-boi > .person {
+      font-weight: bold;
+    }
+    .hello > .powered-by {
+      font-size: 12px;
+      margin-top: 10px;
+      text-align: left;
+      font-family: 'Roboto', sans-serif;
+    }
+    .hello > .powered-by > .castlogo {
+      font-weight: bold;
+      font-size: 26px;
+      margin-top: 2px;
+      margin-left: -1px;
+      font-family: 'Google Sans', sans-serif;
+    }
+    .hello > .powered-by > .castlogo > .material-symbols-outlined {
+      font-size: 30px;
+      vertical-align: -5px;
+      
+    }
+    
   </style>
 </head>
 <body>
-    <div class="hello">Hello, and welcome Cooper!</div>
-    <div class="steps"></div>
+    <div class="container">
+        <div class="hello">
+            <div class="powered-by">Powered by<div class="castlogo"><span class="material-symbols-outlined">cast</span> google_logo Cast</div></div>
+            <div class="big-boi">Welcome to your room,<div class="person">Name Last!</div></div>
+        </div>
+        <div class="steps">
+            testing one two three
+        </div>
+    </div>
     <script src="/js/receiver.js"></script>
 </body>
 </html>
