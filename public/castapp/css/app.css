@@ -129,3 +129,30 @@ body {
     height: 200px;
     margin-top: 10px;
 }
+
+.connection-success-popup, .loading-popup {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 27.5% 0;
+    background-color: #1a1a1a;
+    color: white;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.connection-success-popup > .connection-success-message, .loading-popup > .loading-message {
+    font-weight: bold;
+    font-size: 48px;
+}
+.connection-success-popup > .connection-success-message > span {
+    font-size: 64px;
+    vertical-align: -14px;
+    padding-right: 25px;
+}
+
+.connection-success-popup.show, .loading-popup.show {
+    opacity: 1;
+}

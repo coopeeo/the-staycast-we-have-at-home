@@ -1,3 +1,8 @@
 const context = cast.framework.CastReceiverContext.getInstance();
 
-context.start();
+window.addEventListener('load', () => {
+    document.querySelector('.loading-popup').classList.remove('show');
+});
+document.addEventListener('DOMContentLoaded', () => {
+    context.start();
+});
