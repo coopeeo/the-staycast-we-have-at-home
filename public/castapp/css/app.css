@@ -1,0 +1,78 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    width: 100vw;
+    gap: 0;
+}
+.hello {
+    background-color: #333333;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+.steps {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+.hello > .big-boi {
+    font-size: 28px;
+    margin-top: 40%;
+    text-align: left;
+    margin-left: 15%;
+    font-family: 'Google Sans', sans-serif;
+}
+.hello > .big-boi > .person {
+    font-weight: bold;
+}
+.hello > .powered-by {
+    font-size: 12px;
+    margin-top: 0;
+    margin-left: 2px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+.hello > .powered-by > .castlogo {
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 2px;
+    margin-left: -1px;
+    font-family: 'Google Sans', sans-serif;
+}
+.hello > .powered-by > .castlogo > .material-symbols-outlined {
+    font-size: 30px;
+    vertical-align: -5px;
+    
+}
+.step {
+    position: relative;
+    padding: 20px;
+}
+.step > .stepnumber {
+    font-size: 18px;
+    vertical-align: -2px;
+}
+.step > .step-header {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.step .website-name {
+    font-weight: bold;
+    color: #a6c9fd;
+}
