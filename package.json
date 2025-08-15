@@ -1,0 +1,29 @@
+{
+  "name": "the-staycast-we-have-at-home",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/coopeeo/the-staycast-we-have-at-home#readme",
+  "bugs": {
+    "url": "https://github.com/coopeeo/the-staycast-we-have-at-home/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopeeo/the-staycast-we-have-at-home.git"
+  },
+  "license": "ISC",
+  "author": "coopeeo",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "dependencies": {
+    "castv2-client": "^1.2.0",
+    "express": "^5.1.0",
+    "multicast-dns": "^7.2.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/multicast-dns": "^7.2.4"
+  }
+}
