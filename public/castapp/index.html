@@ -46,6 +46,7 @@
     .steps {
         height: 100%;
         width: 100%;
+        padding: 0;
     }
     .hello > .big-boi {
       font-size: 28px;
@@ -59,7 +60,8 @@
     }
     .hello > .powered-by {
       font-size: 12px;
-      margin-top: 10px;
+      margin-top: 0;
+      margin-left: 2px;
       text-align: left;
       font-family: 'Roboto', sans-serif;
     }
@@ -75,7 +77,20 @@
       vertical-align: -5px;
       
     }
-    
+    .step {
+        position: relative;
+        padding: 20px;
+    }
+    .step > .stepnumber {
+        font-size: 18px;
+        vertical-align: -2px;
+    }
+    .step > .step-header {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bold;
+        padding-left: 5px;
+    }
   </style>
 </head>
 <body>
@@ -85,7 +100,11 @@
             <div class="big-boi">Welcome to your room,<div class="person">Name Last!</div></div>
         </div>
         <div class="steps">
-            testing one two three
+            <div class="step">
+                <span class="material-symbols-outlined stepnumber">wifi</span>
+                <div class="step-header">Connect to the <i class="network-name">Hotel Guest at the John Hotel</i> Wifi</div>
+                <div class="step-info"></div>
+            </div>
         </div>
     </div>
     <script src="/js/receiver.js"></script>
