@@ -28,6 +28,7 @@ body {
     height: 100%;
     width: 100%;
     padding: 0;
+    padding-top: 50px;
 }
 .hello > .big-boi {
     font-size: 28px;
@@ -75,4 +76,56 @@ body {
 .step .website-name {
     font-weight: bold;
     color: #a6c9fd;
+}
+.step .step-code {
+    font-weight: bold;
+    font-size: 38px;
+    padding: 10px;
+}
+.device {
+    font-size: 28px;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 15%;
+}
+.device .device-name {
+    font-weight: bold;
+}
+.device .material-symbols-outlined {
+    font-size: 30px;
+    vertical-align: -5px;
+}
+.steps .separator {
+  border: 0;
+  line-height: 1em;
+  position: relative;
+  text-align: center;
+  height: 1.5em;
+  font-size: 14px;
+  margin: 5px 15px;
+}
+
+.steps .separator::before {
+    content: "";
+    background: linear-gradient(to right, transparent, white, transparent);
+    position: absolute;
+    left: 17.5%;
+    top: 50%;
+    width: 65%;
+    height: 1px;
+}
+
+.steps .separator::after {
+    content: attr(data-content);
+    position: relative;
+    padding: 0 7px;
+    line-height: 1.5em;
+    color: white;
+    background-color: #1a1a1a;
+}
+
+.step-qr {
+    border-radius: 10px;
+    height: 200px;
+    margin-top: 10px;
 }

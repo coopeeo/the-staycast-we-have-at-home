@@ -116,6 +116,18 @@ process.on('SIGINT', () => {
   if (client) client.close();
   process.exit();
 });
+process.on('SIGTERM', () => {
+  log('Shutting down script');
+  session.close()
+  if (client) client.close();
+  process.exit();
+});
+process.on('SIGQUIT', () => {
+  log('Shutting down script');
+  session.close()
+  if (client) client.close();
+  process.exit();
+});
 
 // Start discovery
 log('Starting Chromecast discovery...');
