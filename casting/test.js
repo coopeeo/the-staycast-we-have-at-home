@@ -61,10 +61,12 @@ function connectToChromecast(host) {
       session = app;
       log('Receiver app launched');
 
-      /*app.sendMessage('urn:x-cast:com.hotel.auth', {
-        type: 'auth',
-        roomNumber: ROOM_NUMBER,
-        code: ACCESS_CODE
+      app.sendMessage('settings', {
+        guestWifi: "McDonaldsWifi",
+        castName: "The Best Bedroom TV",
+        person: "crazy",
+        website: "hackclub.com",
+        code: 999999999,
       }, (err) => {
         if (err) {
           log(`Error sending auth: ${err.message}`);
@@ -72,7 +74,7 @@ function connectToChromecast(host) {
         } else {
           log('Authentication sent; receiver should fetch data');
         }
-      });*/
+      });
 
       app.on('status', (status) => {
         log(`Session status: ${JSON.stringify(status)}`);

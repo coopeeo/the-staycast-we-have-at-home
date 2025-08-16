@@ -23,6 +23,7 @@
     "multicast-dns": "^7.2.5"
   },
   "devDependencies": {
+    "@types/chromecast-caf-receiver": "^6.0.23",
     "@types/express": "^5.0.3",
     "@types/multicast-dns": "^7.2.4"
   }
