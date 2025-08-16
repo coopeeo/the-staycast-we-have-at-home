@@ -60,12 +60,12 @@ function connectToChromecast(host) {
 
       session = app;
       log('Receiver app launched');
-
+      
       app.sendMessage('settings', {
-        guestWifi: "McDonaldsWifi",
-        castName: "The Best Bedroom TV",
-        person: "crazy",
-        website: "hackclub.com",
+        guestWifi: "johns hotel guest",
+        castName: "1st Floor Guest Bedroom",
+        person: "Jane Doe",
+        website: "example.com",
         code: 999999999,
       }, (err) => {
         if (err) {
@@ -83,6 +83,9 @@ function connectToChromecast(host) {
           reconnect();
         }
       });
+      app.on('close', _ => {
+        connectToChromecast("192.168.86.223");
+      })
     });
   });
 
