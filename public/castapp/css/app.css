@@ -130,7 +130,7 @@ body {
     margin-top: 10px;
 }
 
-.connection-success-popup, .loading-popup {
+.connection-success-popup, .loading-popup, .not-active-popup {
     position: fixed;
     opacity: 0;
     top: 0;
@@ -143,16 +143,16 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.connection-success-popup > .connection-success-message, .loading-popup > .loading-message {
+.connection-success-popup > .connection-success-message, .loading-popup > .loading-message, .not-active-popup > .not-active-message {
     font-weight: bold;
     font-size: 48px;
 }
-.connection-success-popup > .connection-success-message > span {
+.connection-success-popup > .connection-success-message > span, .not-active-popup > .not-active-message > span {
     font-size: 64px;
     vertical-align: -14px;
     padding-right: 25px;
 }
 
-.connection-success-popup.show, .loading-popup.show {
+.connection-success-popup.show, .loading-popup.show, .not-active-popup.show {
     opacity: 1;
 }

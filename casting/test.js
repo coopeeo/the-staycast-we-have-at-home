@@ -62,9 +62,9 @@ function connectToChromecast(host) {
       log('Receiver app launched');
       
       app.sendMessage('settings', {
-        guestWifi: "johns hotel guest",
-        castName: "1st Floor Guest Bedroom",
-        person: "Jane Doe",
+        guestWifi: "Cooper's Hotel Guest",
+        castName: "Living Room",
+        person: "John Doe",
         website: "example.com",
         code: 999999999,
       }, (err) => {
@@ -117,19 +117,19 @@ function reconnect() {
 // Handle exit
 process.on('SIGINT', () => {
   log('Shutting down script');
-  session.close()
+  //session.close()
   if (client) client.close();
   process.exit();
 });
 process.on('SIGTERM', () => {
   log('Shutting down script');
-  session.close()
+  //session.close()
   if (client) client.close();
   process.exit();
 });
 process.on('SIGQUIT', () => {
   log('Shutting down script');
-  session.close()
+  //session.close()
   if (client) client.close();
   process.exit();
 });
