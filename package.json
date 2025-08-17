@@ -13,9 +13,9 @@
   "license": "ISC",
   "author": "coopeeo",
   "type": "module",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "node main.js"
+    "test": "node src/main.js"
   },
   "dependencies": {
     "castv2-client": "^1.2.0",
