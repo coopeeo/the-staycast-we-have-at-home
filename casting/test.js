@@ -8,7 +8,6 @@ const APPLICATION_ID = '1C05BF09'; // From Google Cast Developer Console
 const ROOM_NUMBER = '123';
 const ACCESS_CODE = 'ABC';
 const RECONNECT_DELAY = 5000;
-const LOG_FILE = 'cast.log';
 /**
  * @type {import('castv2-client').Client | null}
  */
@@ -19,7 +18,6 @@ let session = null;
 function log(message) {
   const timestamp = new Date().toISOString();
   console.log(`${timestamp}: ${message}`);
-  appendFileSync(LOG_FILE, `${timestamp}: ${message}\n`);
 }
 
 // mDNS discovery

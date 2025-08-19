@@ -4,6 +4,5 @@ keys
 *.der
 *.crt
 node_modules/
-cast.log
 .env
 src/generated
