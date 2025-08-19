@@ -136,5 +136,5 @@ process.on('SIGQUIT', () => {
 
 // Start discovery
 log('Starting Chromecast discovery...');
-connectToChromecast("192.168.86.223");
+//connectToChromecast("192.168.86.223");
 startDiscovery();

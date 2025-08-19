@@ -5,3 +5,5 @@ keys
 *.crt
 node_modules/
 cast.log
+.env
+src/generated
