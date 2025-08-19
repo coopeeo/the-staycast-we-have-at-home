@@ -15,7 +15,9 @@
   "type": "module",
   "main": "src/main.js",
   "scripts": {
-    "test": "node src/main.js"
+    "test": "node src/main.js",
+    "prisma": "prisma generate --no-engine",
+    "migrate": "prisma migrate dev"
   },
   "dependencies": {
     "@prisma/client": "^6.14.0",

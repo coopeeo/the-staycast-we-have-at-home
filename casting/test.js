@@ -24,16 +24,34 @@ function log(message) {
 function startDiscovery() {
   log('Querying for Chromecasts...');
   mdns.query({
-    questions: [{ name: '_googlecast._tcp.local', type: 'PTR' }]
+    questions: [{ name: '_googlecast._tcp', type: 'A' }]
   });
 }
 
 mdns.on('response', (response) => {
   response.answers.forEach((answer) => {
-    if (answer.type === 'A' && answer.name.includes('_googlecast._tcp.local')) {
-      const host = answer.data;
-      log(`Found Chromecast at ${host}`);
-      connectToChromecast(host);
+    if (answer.name.includes('_googlecast._tcp') && answer.type == 'PTR') {
+      const host = answer;
+      console.log(`Found Chromecast at`, host);
+      mdns.query({
+        questions: [
+          { name: host.data, type: 'A' },
+          //{ name: host.data, type: 'TXT' },
+          //{ name: host.data, type: 'SRV' }
+        ]
+      });
+      //connectToChromecast(host);
+    }
+
+    if (answer.name.includes('_googlecast._tcp') && answer.type == 'A') {
+      console.log(`Found Chromecast IP address:`, answer.data);
+      connectToChromecast(answer.data);
+    }
+    if (answer.name.includes('_googlecast._tcp') && answer.type == 'TXT') {
+      console.log(`Found Chromecast TXT record: ${answer.data}`);
+    }
+    if (answer.name.includes('_googlecast._tcp') && answer.type == 'SRV') {
+      console.log(`Found Chromecast SRV record:`, answer.data);
     }
   });
 });

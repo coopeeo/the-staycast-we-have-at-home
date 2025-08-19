@@ -13,8 +13,7 @@ model Chromecast {
     name      String
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
-    serialNumber String @unique
-    mdns String @unique
+    ipAddress String @unique
     room Room?
 }
 
