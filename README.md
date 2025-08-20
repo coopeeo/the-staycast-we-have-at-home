@@ -14,6 +14,11 @@ Mom, can we have staycast? Oh sweetie we have staycast at home. ***The StayCast 
 This project uses prisma and node js. I used this to learn prisma and cast framework from google mainly.
 Plus SONFI made it for businesses only, why cant we have it and free as well? (prob cause its on there servers but yeah you get what the point.)
 
+### Pre-Setup
+1. Give 5 dollary doos to mr google
+2. Add your url to your app
+3. register ur serial number 
+
 ### Setup
 0. Make sure you have npm and a database
 1. clone the repository

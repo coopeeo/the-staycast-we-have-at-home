@@ -1,14 +1,6 @@
 import express from 'express'
-import auth from 'basic-auth';
+import auth from '../../middleware/auth.js';
 export default [
-    (request, response, next) => {
-        const credentials = auth(request);
-        if (credentials && credentials.name == process.env.ADMIN_USERNAME && credentials.pass == process.env.ADMIN_PASSWORD) {
-            return next();
-        }
-
-        response.set('WWW-Authenticate', 'Basic realm="Admin Panel"');
-        return response.status(401).send("Denied");
-    },
+    auth,
     express.static('pages/admin')
 ];

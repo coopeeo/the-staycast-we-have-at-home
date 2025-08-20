@@ -22,6 +22,7 @@ export default [
 
 // v1
 import HealthCheckRouter from "./api/health.js";
+import AdminApiRouter from "./api/admin.js";
 
 export const ApiRoutes = [
     {
@@ -31,6 +32,11 @@ export const ApiRoutes = [
                 name: "Health Check",
                 path: "/health",
                 router: HealthCheckRouter
+            },
+            {
+                name: "Admin API",
+                path: "/admin",
+                router: AdminApiRouter
             }
         ]
     }
