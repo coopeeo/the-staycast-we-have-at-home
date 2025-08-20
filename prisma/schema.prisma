@@ -34,19 +34,3 @@ enum ActiveStatus {
     INACTIVE
     INACTIVE_EXIT
 }
-
-/* For Admin */
-model User {
-    id        Int      @id @default(autoincrement())
-    username     String   @unique
-    password     String
-    name      String?
-    type      UserType @default(MANAGER)
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-}
-
-enum UserType {
-    ADMIN
-    MANAGER
-}
