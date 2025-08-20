@@ -17,5 +17,21 @@ export default [
         name: "Receiver Application",
         path: "/receiver",
         router: ReceiverRouter
-    }
+    },
 ];
+
+// v1
+import HealthCheckRouter from "./api/health.js";
+
+export const ApiRoutes = [
+    {
+        version: "1",
+        routes: [
+            {
+                name: "Health Check",
+                path: "/health",
+                router: HealthCheckRouter
+            }
+        ]
+    }
+]

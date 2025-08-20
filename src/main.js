@@ -1,7 +1,7 @@
 import express from "express";
 import https from "https";
 import fs from "fs";
-import routes from "./routes/index.js"; // Assuming you have an index.js that exports all your routes
+import routes, { ApiRoutes as apiRoutes } from "./routes/index.js"; // Assuming you have an index.js that exports all your routes
 import dotenv from 'dotenv'
 const app = express();
 dotenv.config()
@@ -13,6 +13,12 @@ routes.forEach(route => {
 });
 
 app.disable("x-powered-by");
+
+apiRoutes.forEach(apiRoute => {
+    apiRoute.routes.forEach(route => {
+        app.use(`/api/v${apiRoute.version}${route.path}`, route.router);
+    });
+});
 
 
 
