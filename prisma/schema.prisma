@@ -24,7 +24,7 @@ model Room {
     updatedAt DateTime @updatedAt
     chromecast Chromecast @relation(fields: [chromecastId], references: [id])
     chromecastId Int @unique
-    active Boolean @default(true)
+    active ActiveStatus @default(ACTIVE)
     guestName String?
     displayName String?
 }
